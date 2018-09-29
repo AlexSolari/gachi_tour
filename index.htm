@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html>
 
 <head>
@@ -8,160 +8,49 @@
     <!-- load MUI -->
     <link href="mui.min.css" rel="stylesheet" type="text/css" />
     <script src="mui.min.js"></script>
+    <script src="index.js"></script>
 </head>
 
 <body>
+
+    <script id="template-tab" type="text/html">
+        <li class="">
+            <a data-mui-toggle="tab" data-mui-controls="pane-justified-{index}">{battletag}</a>
+        </li>
+    </script>
+
+    <script id="template-content" type="text/html">
+        <div class="mui-tabs__pane" id="pane-justified-{index}">
+            <div class="mui-container-fluid">
+                <div class="mui-row">
+                    <div class="mui-col-md-3">
+                        <img src="{deck1}">
+                    </div>
+                    <div class="mui-col-md-3">
+                        <img src="{deck2}">
+                    </div>
+                    <div class="mui-col-md-3">
+                        <img src="{deck3}">
+                    </div>
+                    <div class="mui-col-md-3">
+                        <img src="{deck4}">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+
     <!-- example content -->
     <div class="mui-container">
         <div class="mui-panel">
             <h1 style='text-align: center'>НОВОТУРИК</h1>
             <div class="mui-container-fluid">
-                <ul class="mui-tabs__bar mui-tabs__bar--justified">
-                    <li class="mui--is-active">
-                        <a data-mui-toggle="tab" data-mui-controls="pane-justified-1">NoShamed#2402</a>
-                    </li>
-                    <li>
-                        <a data-mui-toggle="tab" data-mui-controls="pane-justified-2">Persiwall#2627</a>
-                    </li>
-                    <li>
-                        <a data-mui-toggle="tab" data-mui-controls="pane-justified-3">OriGiNaL#2571</a>
-                    </li>
-                    <li>
-                        <a data-mui-toggle="tab" data-mui-controls="pane-justified-4">risus#21965</a>
-                    </li>
-                    <li>
-                        <a data-mui-toggle="tab" data-mui-controls="pane-justified-5">SecondSail#2603</a>
-                    </li>
-                    <li>
-                        <a data-mui-toggle="tab" data-mui-controls="pane-justified-6">Sp4rkyd4rk#2269</a>
-                    </li>
-                    <li>
-                        <a data-mui-toggle="tab" data-mui-controls="pane-justified-7">Vorchun#21737</a>
-                    </li>
-                    <li>
-                            <a data-mui-toggle="tab" data-mui-controls="pane-justified-8">LLDewe#2569</a>
-                        </li>
+                <ul class="tabs mui-tabs__bar mui-tabs__bar--justified">
+
                 </ul>
-                <div class="mui-tabs__pane mui--is-active" id="pane-justified-1">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-4">
-                                <img src="NoShamed_2402\hunter.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="NoShamed_2402\paladin.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="NoShamed_2402\rogue.png">
-                            </div>
-                        </div>
-                    </div>
+                <div class="tabs-content">
+
                 </div>
-                <div class="mui-tabs__pane" id="pane-justified-2">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-4">
-                                <img src="Persiwall_2627\warrior.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="Persiwall_2627\warlock.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="Persiwall_2627\rogue.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mui-tabs__pane" id="pane-justified-3">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-4">
-                                    <img src="OriGiNaL_2571\hunter.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                    <img src="OriGiNaL_2571\mage.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                    <img src="OriGiNaL_2571\rogue.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mui-tabs__pane" id="pane-justified-4">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-4">
-                                <img src="risus_21965\druid.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="risus_21965\warlock.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="risus_21965\rogue.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mui-tabs__pane" id="pane-justified-5">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-4">
-                                <img src="SecondSail_2603\warrior.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="SecondSail_2603\warlock.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="SecondSail_2603\rogue.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mui-tabs__pane" id="pane-justified-6">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-4">
-                                <img src="Sp4rkyd4rk_2269\mage.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="Sp4rkyd4rk_2269\paladin.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="Sp4rkyd4rk_2269\rogue.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mui-tabs__pane" id="pane-justified-7">
-                    <div class="mui-container-fluid">
-                        <div class="mui-row">
-                            <div class="mui-col-md-4">
-                                <img src="Vorchun_21737\hunter.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="Vorchun_21737\mage.png">
-                            </div>
-                            <div class="mui-col-md-4">
-                                <img src="Vorchun_21737\paladin.png">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mui-tabs__pane" id="pane-justified-8">
-                        <div class="mui-container-fluid">
-                            <div class="mui-row">
-                                <div class="mui-col-md-4">
-                                    <img src="LLDewe_2569\hunter.png">
-                                </div>
-                                <div class="mui-col-md-4">
-                                    <img src="LLDewe_2569\mage.png">
-                                </div>
-                                <div class="mui-col-md-4">
-                                    <img src="LLDewe_2569\paladin.png">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
             </div>
         </div>
     </div>
