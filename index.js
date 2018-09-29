@@ -123,6 +123,13 @@ var data = [
         deck3: "Mulder/3.png",
         deck4: "Mulder/4.png",
     },
+    {
+        battletag: "laxpi#2950",
+        deck1: "laxpi/1.png",
+        deck2: "laxpi/2.png",
+        deck3: "laxpi/3.png",
+        deck4: "laxpi/4.png",
+    },
 ]
 
 $(function Init() {
