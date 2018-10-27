@@ -1,4 +1,4 @@
-var $ = function Utility(selector, context) {
+var __ = function Utility(selector, context) {
     var searchResult;
     if (typeof (selector) == "string") {
         context = context || document;
@@ -76,68 +76,61 @@ var $ = function Utility(selector, context) {
     return searchResult;
 };
 
-$.clone = function (object) {
+__.clone = function (object) {
     return JSON.parse(JSON.stringify(object));
 }
 
 var data = [
     {
-        battletag: "SecondSail#2603",
-        deck1: "SecondSail/1.png",
-        deck2: "SecondSail/2.png",
-        deck3: "SecondSail/3.png",
-        deck4: "SecondSail/4.png",
+        battletag: "CoconutBro#2690",
+        deck1: "CoconutBro/1.png",
+        deck2: "CoconutBro/2.png",
+        deck3: "CoconutBro/3.png",
     },
     {
         battletag: "OriGiNaL#2571",
         deck1: "OriGiNaL/1.png",
         deck2: "OriGiNaL/2.png",
         deck3: "OriGiNaL/3.png",
-        deck4: "OriGiNaL/4.png",
     },
     {
-        battletag: "Hentaiware#2374",
-        deck1: "Hentaiware/1.png",
-        deck2: "Hentaiware/2.png",
-        deck3: "Hentaiware/3.png",
-        deck4: "Hentaiware/4.png",
-    },
-    {
-        battletag: "AppleSin#2242",
-        deck1: "AppleSin/1.png",
-        deck2: "AppleSin/2.png",
-        deck3: "AppleSin/3.png",
-        deck4: "AppleSin/4.png",
+        battletag: "DupeplGanter#2737",
+        deck1: "DupeplGanter/1.png",
+        deck2: "DupeplGanter/2.png",
+        deck3: "DupeplGanter/3.png",
     },
     {
         battletag: "Vorchun#21737",
         deck1: "Vorchun/1.png",
         deck2: "Vorchun/2.png",
         deck3: "Vorchun/3.png",
-        deck4: "Vorchun/4.png",
     },
     {
         battletag: "Mulder#22828",
         deck1: "Mulder/1.png",
         deck2: "Mulder/2.png",
         deck3: "Mulder/3.png",
-        deck4: "Mulder/4.png",
     },
     {
-        battletag: "laxpi#2950",
-        deck1: "laxpi/1.png",
-        deck2: "laxpi/2.png",
-        deck3: "laxpi/3.png",
-        deck4: "laxpi/4.png",
+        battletag: "xeniqsx#2596",
+        deck1: "xeniqsx/1.png",
+        deck2: "xeniqsx/2.png",
+        deck3: "xeniqsx/3.png",
+    },
+    {
+        battletag: "Sp4rkyDa4rk#2269",
+        deck1: "Sp4rkyD4rk/1.png",
+        deck2: "Sp4rkyD4rk/2.png",
+        deck3: "Sp4rkyD4rk/3.png",
     },
 ]
 
-$(function Init() {
-    var tabPattern = $("#template-tab").html();
-    var tabContentPattern = $("#template-content").html();
+__(function Init() {
+    var tabPattern = __("#template-tab").html();
+    var tabContentPattern = __("#template-content").html();
 
-    var tabContainer = $(".tabs");
-    var contentContainer = $(".tabs-content");
+    var tabContainer = __(".tabs");
+    var contentContainer = __(".tabs-content");
 
     data.forEach(function (data, index) {
         index += 1;
@@ -150,8 +143,7 @@ $(function Init() {
             .replace("{index}", index)
             .replace("{deck1}", data.deck1)
             .replace("{deck2}", data.deck2)
-            .replace("{deck3}", data.deck3)
-            .replace("{deck4}", data.deck4);
+            .replace("{deck3}", data.deck3);
 
         if (index == 1) {
             formattedContent = formattedContent.replace("mui-tabs__pane", "mui-tabs__pane mui--is-active");
@@ -163,7 +155,7 @@ $(function Init() {
     });
 
     setTimeout(function () {
-        $(".tabs li a").each(function (tab) {
+        __(".tabs li a").each(function (tab) {
             tab.dispatchEvent(new CustomEvent("click"));
         });
     }, 333);
